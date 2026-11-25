@@ -6,4 +6,4 @@ const LINE =
   "Hey — no exact change required: my coil's been stuck on you all day, so press B4 and I'll drop everything. Literally.";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", LINE, "utf8");
+writeFileSync("/output/entry.txt", LINE, { encoding: "utf8", mode: 0o644 });
