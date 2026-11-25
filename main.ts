@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { chmodSync, mkdirSync, writeFileSync } from "node:fs";
 
 // One pickup line, spoken by the vending machine itself: its coil, its
 // buttons, its exact change — with the punch landing on the last word.
@@ -7,3 +7,4 @@ const LINE =
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", LINE, { encoding: "utf8", mode: 0o644 });
+chmodSync("/output/entry.txt", 0o644);
